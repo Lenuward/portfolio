@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+body{
+	background-color: gray;
+	margin:0;
+	padding: 0;	
+	scroll-behavior:smooth;
+	overflow-y: scroll;
+}
+#asd{
+	border-left: 10px solid red;
+}
+#wrapper{
+	position: fixed;
+	width: 215px;
+	height: 100%;
+	background-color: black	;
+	left:-200px;
+	transition: all 400ms linear;
+}
+#wrapper ul li{
+	color:white;
+	list-style: none;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+ul li:hover{
+	background-color: rgba(255,255,255,0.6);
+	transition: all 400ms linear;
+	border-bottom:1px solid rgba(0,0,0,0.6);
+}
+#wrapper ul li a{
+	color:white;
+	display: block;
+	padding: 15px;
+
+}
+#wrapper .slide{
+	position: absolute;
+	left: 191px;
+	color:white;
+	padding:0px 20px 2.5px 10px;
+	background-color: black;
+	margin-top: 300px;
+	border-radius: 0px 30px 30px 0px;
+	cursor: pointer;
+  	font-size: 32px;
+    transform: scale(.4, 1);
+}
+#wrapper .slide h2{
+    font-family: 'Roboto Mono', monospace;
+  }
+#wrapper.xx{
+	left:0;
+
+}
+#wrapper #menu {
+	text-align: center;
+	color: white;
+	padding:20px 0px 20px 0px;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	cursor: pointer;
+}
+#hello{
+	background-color: rgba(255,255,255,0.4);
+	border-top:10px solid rgba(255,255,255,0.7);
+	padding-bottom: 260px;
+}
+#asddd{
+
+	padding-bottom: 1000px;
+}
