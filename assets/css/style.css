@@ -1,0 +1,183 @@
+@font-face{
+    font-family:'Ubuntu';
+    src:url('../fonts/UbuntuCondensed-Regular.ttf')
+}
+*{
+    font-family:Ubuntu,sans-serif
+}
+body,html{
+    max-width:100%!important;
+    overflow-x:hidden
+}
+body{
+    background-image:url(../images/mainbg.jpg);
+    background-position:center;
+    background-size:cover
+}
+::-webkit-scrollbar{
+    width:5px
+}
+::-webkit-scrollbar-track{
+    background:#000
+}
+::-webkit-scrollbar-thumb{
+    background:gray
+}
+.fifthpage,.fourthpage,.secondpage{
+    background-position:center;
+    background-size:cover
+}
+::-webkit-scrollbar-thumb:hover{
+    background:#555
+}
+.nav-item{
+    color:#adb5bd;
+    text-transform:uppercase
+}
+.nav-item a{
+    cursor:pointer
+}
+.nav-item:after{
+    display:block;
+    content:'';
+    border-bottom:3px solid #fff;
+    transform:scaleX(0);
+    transition:transform 250ms
+}
+.nav-item:hover:after{
+    transform:scaleX(1)
+}
+.firstpage{
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.9))
+}
+.secondpage{
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,.5)),url("../images/second.png")
+}
+.thirdpage{
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,.8))
+}
+.fourthpage{
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,.8)),url("../images/works.png")
+}
+.fifthpage{
+    background-image:linear-gradient(to bottom,rgba(0,0,0,.7),rgba(0,0,0,.7)),url("../images/contact.jpg")
+}
+.img{
+    -webkit-user-drag:none;
+    user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none
+}
+.myhr{
+    background:linear-gradient(90deg,transparent 20%,#fff 50%,transparent 80%);
+    height:2px;
+    border:none
+}
+.myhr2{
+    background:linear-gradient(90deg,transparent 0,#fff 50%,transparent 100%);
+    height:1px;
+    border:none
+}
+.a-hover-line:hover{
+    text-decoration:underline!important
+}
+.hidden{
+    opacity:0;
+    transition:1s
+}
+.hiddenlefttoright,.hiddenrighttoleft{
+    opacity:0;
+    filter:blur(5px);
+    transition:.3s
+}
+.hiddenlefttoright{
+    transform:translateX(-100%);
+}
+.hiddenrighttoleft{
+    transform:translateX(100%);
+}
+.show{
+    opacity:1;
+    filter:blur(0);
+    transform:translateX(0);
+}
+.hideIt{
+    -webkit-animation: cssAnimation 1s forwards; 
+    animation: cssAnimation 1s forwards;
+    animation-delay: 5s;
+}
+@keyframes cssAnimation {
+    50%  {
+        transform:translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+}
+@-webkit-keyframes cssAnimation {
+    50%  {
+        transform:translateX(0%);
+        opacity: 1;
+    }
+    100% {
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .fifthpage,.firstpage,.fourthpage,.thirdpage{
+        height:110vh
+    }
+    .secondpage{
+        height:120vh
+    }
+}
+@media screen and (min-width:1024px){
+    .fifthpage,.firstpage,.fourthpage,.secondpage,.thirdpage{
+        height:100vh
+    }
+}
+@media screen and (max-width:768px){
+    .firstpage{
+        height:110vh
+    }
+    .fifthpage,.fourthpage,.secondpage,.thirdpage{
+        height:150vh
+    }
+}
+@media screen and (max-width:480px){
+    .firstpage{
+        height:120vh
+    }
+    .secondpage{
+        height:150vh
+    }
+    .fifthpage,.fourthpage,.thirdpage{
+        height:140vh
+    }
+}
+@media screen and (max-width:320px){
+    .firstpage{
+        height:120vh
+    }
+    .secondpage{
+        height:170vh
+    }
+    .fifthpage,.fourthpage,.thirdpage{
+        height:140vh
+    }
+}
+.hover-flex{
+    transform: translateX(-55%);
+    transition: 0.3s;
+}
+.hover-flex:hover{
+    transform: translate(0);
+}
+.svg-fill{
+    fill:white;
+}
