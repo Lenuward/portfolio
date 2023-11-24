@@ -89,7 +89,7 @@ body{
 .hiddenlefttoright,.hiddenrighttoleft{
     opacity:0;
     filter:blur(5px);
-    transition:.3s
+    transition:.3s;
 }
 .hiddenlefttoright{
     transform:translateX(-100%);
@@ -103,13 +103,16 @@ body{
     transform:translateX(0);
 }
 .hideIt{
-    -webkit-animation: cssAnimation 1s forwards; 
-    animation: cssAnimation 1s forwards;
-    animation-delay: 10s;
+    -webkit-animation: cssAnimation 0.4s forwards !important; 
+    animation: cssAnimation 1s forwards !important;
 }
 @keyframes cssAnimation {
+    0% {
+        transform:translateX(45%);
+        opacity: 1;
+    }
     50%  {
-        transform:translateX(0%);
+        transform:translateX(100%);
         opacity: 1;
     }
     100% {
@@ -118,7 +121,11 @@ body{
     }
 }
 @-webkit-keyframes cssAnimation {
-    50%  {
+    0% {
+        transform:translateX(100%);
+        opacity: 1;
+    }
+    50% {
         transform:translateX(0%);
         opacity: 1;
     }
@@ -127,7 +134,49 @@ body{
         opacity: 0;
     }
 }
-
+.toggleTrigger{
+    -webkit-animation: cssAnimation2 0.4s forwards; 
+    animation: cssAnimation2 0.3s forwards;
+}
+.hover-flex{
+    transition: all 0.2s !important;
+    transform: translateX(-100%);
+}
+.hover-flex:hover{
+    transform: translateX(-45%) !important;
+}
+.toggleTrigger:nth-child(1){
+    animation-delay: 200ms;
+}
+.toggleTrigger:nth-child(2){
+    animation-delay: 400ms;
+}
+.toggleTrigger:nth-child(3){
+    animation-delay: 600ms;    
+}
+.toggleTrigger:nth-child(4){
+    animation-delay: 800ms;    
+}
+@keyframes cssAnimation2 {
+    0%  {
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform:translateX(45%);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes cssAnimation2 {
+    0%  {
+        transform:translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform:translateX(45%);
+        opacity: 1;
+    }
+}
 @media screen and (max-width:1024px){
     .fifthpage,.firstpage,.fourthpage,.thirdpage{
         height:110vh
@@ -170,13 +219,6 @@ body{
     .fifthpage,.fourthpage,.thirdpage{
         height:140vh
     }
-}
-.hover-flex{
-    transform: translateX(-55%);
-    transition: 0.3s;
-}
-.hover-flex:hover{
-    transform: translate(0);
 }
 .svg-fill{
     fill:white;
