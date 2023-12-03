@@ -205,10 +205,16 @@ body{
     .secondpage{
         height:120vh
     }
+    #particles-js{
+        height: 560vh;
+    }
 }
 @media screen and (min-width:1024px){
     .fifthpage,.firstpage,.fourthpage,.secondpage,.thirdpage{
         height:100vh
+    }
+    #particles-js{
+        height: 499vh;
     }
 }
 @media screen and (max-width:991px){
@@ -227,6 +233,9 @@ body{
     .fifthpage,.fourthpage,.secondpage,.thirdpage{
         height:150vh
     }
+    #particles-js{
+        height: 705vh;
+    }
 }
 @media screen and (max-width:480px){
     .firstpage{
@@ -238,6 +247,9 @@ body{
     .fifthpage,.fourthpage,.thirdpage{
         height:140vh
     }
+    #particles-js{
+        height: 685vh;
+    }
 }
 @media screen and (max-width:320px){
     .firstpage{
@@ -248,6 +260,9 @@ body{
     }
     .fifthpage,.fourthpage,.thirdpage{
         height:140vh
+    }
+    #particles-js{
+        height: 705vh;
     }
 }
 .svg-fill{
@@ -299,4 +314,8 @@ body{
 }
 .bg-blue{
     background-color: rgba(45, 40, 62, 1) !important;
+}
+#particles-js {
+    width: 100%;
+    position: absolute;
 }
